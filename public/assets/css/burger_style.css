@@ -1,0 +1,61 @@
+body {
+	text-align:center;
+	background-color: orange;
+	padding-top: 10px;
+}
+li {
+/*  background: #FAEBD7;*/
+  list-style: none;
+/*  text-decoration: none;
+*/  margin: 5px;
+  padding: 5px;
+}
+#ca{
+	height:75px;
+	width:300px;
+}
+#bnoteaten{
+	height:75px;
+	width:300px;
+	background-color: #fff;
+	text-align:center;
+}
+#beaten{
+	height:75px;
+	width:300px;
+	background-color: #fff;
+	text-align:center;
+}
+#notEaten{
+	float:right;
+}
+#Eaten{
+	float:left;
+	padding-left:0px;
+}
+#btoeat{
+	float:right;
+}
+#bhasbeeneaten{
+	float:right;
+}
+#contNtEtn {
+	text-align:right;
+}
+#contEtn {
+	text-align:left;
+}
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+/*  background: aqua;
+*/  
+  margin: 5px;
+  padding: 5px;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}

@@ -1,0 +1,57 @@
+<img src="/assets/image/tumblr_mijubzMkYD1qzlbu0o1_250.gif">
+<h1>Eat-Da-Burger!</h1>
+<div class="row">
+  <div class="col-md-6" id="contNtEtn">
+    <h2>Burgers you'd like to eat:</h2>
+
+    <ul id="notEaten">
+      {{#each burgers}}
+        {{#unless this.eaten}}
+          <li id="bnoteaten">
+            {{this.id}}. {{this.name}}
+            <br>
+            First Created:{{this.tsinit}}
+            <form action="/burgers/update/{{this.id}}?_method=PUT" method="POST">
+              <input type="hidden" name="eaten" value="true">
+             <button type="submit" id="btoeat">Devour It!</button>
+            </form>
+
+          </li>
+       {{/unless}}
+      {{/each}}
+    </ul>
+  </div>
+  <div class="col-md-6" id="contEtn">
+    <h2>Burgers you've eaten:</h2>
+
+    <ul id="Eaten">
+      {{#each burgers}}
+        {{#if this.eaten}}
+          <li id="beaten">
+            {{this.id}}. {{this.name}}
+              <br>
+              Last Eaten: {{this.tslast}}
+            <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+              <input type="hidden" name="eaten" value="false">
+              <button type="submit" id="bhasbeeneaten">Get It Again?</button>
+            </form>
+
+          </li>
+        {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
+<form class="create-update-form" action="burgers/create" method="POST">
+
+  <div class="form-group">
+    <input type="text" id="ca" name="name">
+  </div>
+
+  <button type="submit">Submit</button>
+  <p>Enter a burger you want to eat and click the "Submit" button</p>
+</form>
+
+<form action="burgers/delete/?_method=DELETE" method="POST">
+  <button type="submit">Clear all the burgers</button>
+</form>
