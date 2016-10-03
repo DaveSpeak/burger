@@ -1,0 +1,30 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "burger eating project",
+  "main": "server.js",
+  "scripts": {
+    "test": "none",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaveSpeak/burger.git"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "Dave Speaker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DaveSpeak/burger/issues"
+  },
+  "homepage": "https://github.com/DaveSpeak/burger#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.6",
+    "string": "^3.3.1"
+  }
+}
