@@ -4,10 +4,8 @@ body {
 	padding-top: 10px;
 }
 li {
-/*  background: #FAEBD7;*/
   list-style: none;
-/*  text-decoration: none;
-*/  margin: 5px;
+  margin: 5px;
   padding: 5px;
 }
 #ca{

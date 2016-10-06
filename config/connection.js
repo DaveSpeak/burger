@@ -1,7 +1,7 @@
-/*
-Here is where you make the connection to the database and export and used by the O.R.M.
-*/
+// This code was taken from the cats app and modified
+// require the 'mysql' npm package
 var mysql = require('mysql');
+// var connection sets up the mysql connection parameters
 var connection = mysql.createConnection({
 	port: 3306,
 	host: 'localhost',
@@ -10,6 +10,7 @@ var connection = mysql.createConnection({
 	database: 'burger_db'
 });
 
+// connect with the mysql database
 connection.connect(function (err) {
 	if (err) {
 		console.error('error connecting: ' + err.stack);
@@ -17,5 +18,5 @@ connection.connect(function (err) {
 	}
 	console.log('connected as id ' + connection.threadId);
 });
-
+// export to allow other functions to use the connection
 module.exports = connection;
