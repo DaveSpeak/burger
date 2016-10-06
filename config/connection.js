@@ -2,14 +2,18 @@
 // require the 'mysql' npm package
 var mysql = require('mysql');
 // var connection sets up the mysql connection parameters
-var connection = mysql.createConnection({
-	port: 3306,
-	host: 'localhost',
-	user: 'root',
-	password: '!!CRUMBLE!@8i6',
-	database: 'burger_db'
-});
-
+// either using Jawsdb for Heroku or localhost
+if (process.env.JAWSDB_URL){
+	connection=mysql.createConnection(process.env.JAWSDB_URL);
+}else {
+	var connection = mysql.createConnection({
+		port: 3306,
+		host: 'localhost',
+		user: 'root',
+		password: '!!CRUMBLE!@8i6',
+		database: 'burger_db'
+	});
+};
 // connect with the mysql database
 connection.connect(function (err) {
 	if (err) {
